@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Iran Wander{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jamshid.css') }}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    <main class="page-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% block modals %}
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content" id="modal-content"></div>
+    </div>
+    {% endblock %}
+
+    {% block footer %}
+    <footer class="page-footer">
+    </footer>
+    {% endblock %}
+
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

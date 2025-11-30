@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../img/signinback.webp) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.login {
+  width: 40rem;
+  max-width: 95%;
+  height: auto;
+  min-height: 42rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37), 0 0 20px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  transition: all 0.4s ease;
+}
+
+.login img {
+  width: 8rem;
+  height: 11rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 6px 15px rgba(0,0,0,0.4));
+}
+
+.welcome-div {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  margin: 0;
+}
+
+.login-text {
+  text-align: center;
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.logins-p {
+  color: white;
+  opacity: 0.7;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ورودی‌ها */
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.top-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  max-width: 15rem;
+}
+
+.Email-div {
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input::placeholder {
+  color: transparent;
+}
+
+.input:focus,
+.input:valid {
+  border-color: #1a73e8;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 20px rgba(26, 115, 232, 0.35);
+}
+
+.user-label {
+  position: absolute;
+  left: 1.2rem;
+  top: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  transition: all 0.25s ease;
+  background: transparent;
+  padding: 0 0.4rem;
+  font-size: 1rem;
+}
+
+.input:focus ~ .user-label,
+.input:valid ~ .user-label {
+  top: -0.6rem;
+  font-size: 0.85rem;
+  color: #64b5f6;
+  background: rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+.button-sign-in {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-sign-in input {
+  width: 100%;
+  height: 3.2rem;
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+}
+
+.button-sign-in input:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(33, 150, 243, 0.6);
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+}
+
+.back-to-login {
+  margin-top: 1.8rem;
+}
+
+.back-to-login a {
+  color: #90caf9;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.98rem;
+  transition: color 0.3s;
+}
+
+.back-to-login a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .login {
+    width: 36rem;
+    padding: 2.5rem 1.8rem;
+  }
+  .Email-div .input,
+  .button-sign-in input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    width: 92%;
+    padding: 2.5rem 1.5rem;
+    border-radius: 2.5rem;
+  }
+
+  .top-inputs {
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
+  .input-group {
+    max-width: 100%;
+  }
+
+  .welcome-p {
+    font-size: 1.7rem;
+  }
+
+  .logins-p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login {
+    padding: 2rem 1.2rem;
+    border-radius: 2rem;
+  }
+
+  .login img {
+    width: 6rem;
+    height: 8.5rem;
+  }
+
+  .welcome-p {
+    font-size: 1.5rem;
+  }
+
+  .input {
+    padding: 0.9rem;
+    font-size: 0.98rem;
+  }
+
+  .button-sign-in input {
+    height: 3rem;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .welcome-p {
+    font-size: 1.35rem;
+  }
+  .login {
+    padding: 1.8rem 1rem;
+  }
+}
