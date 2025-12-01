@@ -511,10 +511,11 @@ body {
   object-fit: cover;
   display: block;
 }
-.card h3 {
+.card a {
   padding: 0.75rem 1rem 0 0.95rem;
   font-size: 1.05rem;
   color: var(--text);
+  text-decoration: none;
 }
 .card p {
   padding: 0.25rem 0.95rem 1rem 0.95rem;
@@ -1232,6 +1233,7 @@ body {
   color: white;
   font-size: 1.1rem;
   outline: none;
+  width: 13rem;
 }
 
 #emailInput::placeholder {
@@ -1355,7 +1357,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.8rem;
-  margin: 4.5rem 0;
 }
 
 .mobile-nav-links a {
@@ -1534,3 +1535,28 @@ header {
 #mobileMenuToggle.active .hamburger-icon { display: none; }
 #mobileMenuToggle.active .close-icon     { display: block; }
 
+@media (max-width: 400px) {
+  .input-group {
+    display: flex;
+  }
+  .btn-subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text {
+    display: none;
+  }
+  #emailInput {
+    max-width: 200px;
+  }
+
+  @media (max-width: 360px){
+    #emailInput {
+      max-width: 150px;
+    } 
+    .search-btn {
+      max-width: 80px;
+    }
+  }
+}

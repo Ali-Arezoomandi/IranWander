@@ -93,6 +93,10 @@ body {
     text-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
+.card a {
+    text-decoration: none;
+}
+
 .like-icon {
     width: 42px;
     height: 42px;
