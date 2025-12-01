@@ -4,6 +4,106 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
 
+<style>
+@media (max-width: 480px) {
+    section:first-of-type {
+        padding: 130px 20px !important;
+    }
+    section:first-of-type h1 {
+        font-size: 38px !important;
+    }
+    section:first-of-type p {
+        font-size: 18px !important;
+    }
+    section:nth-of-type(2) > div {
+        grid-template-columns: 1fr !important;
+        gap: 35px !important;
+    }
+    article img {
+        height: 220px !important;
+    }
+    article div[style*="padding:"] {
+        padding: 25px !important;
+    }
+    article h3 {
+        font-size: 22px !important;
+    }
+    article p {
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+    }
+    article div[style*="display: flex"] {
+        font-size: 14px !important;
+    }
+    article a {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 414px) {
+    section:first-of-type h1 {
+        font-size: 34px !important;
+    }
+    article img {
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 390px) {
+    section:first-of-type h1 {
+        font-size: 32px !important;
+    }
+    section:first-of-type p {
+        font-size: 16px !important;
+    }
+    article div[style*="padding:"] {
+        padding: 22px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    section:first-of-type h1 {
+        font-size: 28px !important;
+    }
+    section:first-of-type p {
+        font-size: 14px !important;
+    }
+    article img {
+        height: 180px !important;
+    }
+    article h3 {
+        font-size: 19px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    section:first-of-type {
+        padding: 110px 15px !important;
+    }
+    section:first-of-type h1 {
+        font-size: 26px !important;
+    }
+    section:first-of-type p {
+        font-size: 13px !important;
+    }
+    article div[style*="padding:"] {
+        padding: 18px !important;
+    }
+    article img {
+        height: 160px !important;
+    }
+    article h3 {
+        font-size: 17px !important;
+    }
+    article p {
+        font-size: 13px !important;
+    }
+    article a {
+        font-size: 14px !important;
+    }
+}
+</style>
+
 <section
     style="background: url('/static/img/stories.jpg') center/cover no-repeat; color: white; padding: 180px 20px; text-align: center; position: relative;">
     <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5);"></div>
@@ -40,7 +140,6 @@
             </div>
         </article>
         {% endfor %}
-
     </div>
 </section>
 {% endblock %}
